@@ -15,7 +15,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+section{
+  padding: 5rem 9%;
+}
 /* DESKTOP NAV */
 
 nav,
@@ -144,7 +146,8 @@ nav {
   }
   /*================ Navigation Bar ends here ========================================= */
   section {
-    /* padding-top: 4vh; */
+    padding-top: 4vh;
+    height: 94vh;
     padding: 0 10%;
     box-sizing: border-box;
     min-height: fit-content;
@@ -355,6 +358,23 @@ nav {
   top: 30px;
   left: 50%;
   transform: translate(-50%);
-  max-width: 350px;
+  max-width: 380px;
   object-fit: cover;
 }
+/* =====================================about section ======================*/
+.about .box-container .box .image2{
+  height: 40rem;
+}
+
+.about .box-container .box .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
