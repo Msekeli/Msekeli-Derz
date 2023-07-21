@@ -19,7 +19,6 @@ section{
   padding: 5rem 9%;
 }
 /* DESKTOP NAV */
-
 nav,
 .nav-links {
   display: flex;
@@ -29,6 +28,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 14vh;
+  position: fixed; /* Add this to make the navigation bar fixed */
+  top: 0; /* Position it at the top of the viewport */
+  left: 0; /* Position it at the left side of the viewport */
+  right: 0; /* Position it at the right side of the viewport */
+  z-index: 999; /* Adjust the z-index value as needed to ensure it's on top of other content */
+  background-color: rgba(0, 0, 0, 0.8); /* Add a background color to the navigation bar */
 }
 
 .nav-links {
@@ -38,20 +43,20 @@ nav {
 }
 
 .nav-links a {
-  color:white;
+  color: white;
   text-decoration: none;
-  text-decoration-color:yellow;
-  text-transform:uppercase;
+  text-decoration-color: yellow;
+  text-transform: uppercase;
   opacity: 0;
-  animation: slideTop .5s ease forwards;
-  animation-delay: calc(.2s * var(--i));
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .nav-links a:hover {
   color: yellow;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color:gold;
+  text-decoration-color: gold;
 }
 
 .logo {
@@ -65,6 +70,12 @@ nav {
 .logo:hover {
   cursor: default;
 }
+
+/* Add this style to push the content below the navigation bar */
+/* body {
+  padding-top: 14vh !important;
+} */
+
 /* HAMBURGER MENU */
 
 #hamburger-nav {
@@ -146,8 +157,7 @@ nav {
   }
   /*================ Navigation Bar ends here ========================================= */
   section {
-    padding-top: 4vh;
-    height: 94vh;
+    padding-top: 14vh !important;
     padding: 0 10%;
     box-sizing: border-box;
     min-height: fit-content;
@@ -160,7 +170,7 @@ nav {
 /* START home section style start */
 #home{
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -362,19 +372,315 @@ nav {
   object-fit: cover;
 }
 /* =====================================about section ======================*/
-.about .box-container .box .image2{
-  height: 40rem;
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.about .box-container .box .image img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.section-title {
+  font-size: 2rem; /* Adjust the font size as needed */
+  color: aliceblue;
+  margin-bottom: 2rem; /* Add some space between the title and the content */
 }
 
-.about .box-container{
+.about .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
+}
+
+/* Add styles for the image and paragraphs if needed */
+.box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.box {
+  /* Add styles for the paragraphs if needed */
+}
+
+
+
+/* ===============================certificate section ========================== */
+  /* ------------------certifications section */
+  #certification {
+    padding: 20px 10%;
+  }
+#certification .section-title {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+ 
+}
+
+.certificate__container {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+
+.certificate__img img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Add transition property */
+}
+
+.certificate__img img:hover {
+  transform: scale(1.4); /* Increase the image size by 30% on hover */
+}
+/* =============================== SKILLS =====*/
+#skills{
+  height: 100vh;
+}
+.skills__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.skills_content {
+  margin: 0 10px;
+}
+.skills_number{
+  color: #fff;
+}
+.skills_content-left {
+  text-align: left;
+}
+
+.skills_content-right {
+  text-align: right;
+}
+
+.skills__subtitle {
+  font-size: large;
+  text-align: left;
+  color: rgb(250, 247, 232);
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.skills_data {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skills__name {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.skills_bar {
+  position: absolute;
+  bottom: -0.75rem;
+  height: 0.25rem;
+  background-color: yellow;
+}
+
+/* Adjust the widths for front-end and back-end skills */
+.skills_html {
+  width: 90%;
+}
+
+.skills_xaml {
+  width: 70%;
+}
+
+.skills_css {
+  width: 85%;
+}
+
+.skills_bootstrap {
+  width: 55%;
+}
+
+.skills_js {
+  width: 50%;
+}
+
+.skills_flutter {
+  width: 45%;
+}
+
+.skills_photoshop {
+  width: 60%;
+}
+
+.skills_cs {
+  width: 65%;
+}
+
+.skills_java {
+  width: 50%;
+}
+
+.skills_ps {
+  width: 60%;
+}
+
+.skills_ss {
+  width: 60%;
+}
+
+.skills_dart {
+  width: 45%;
+}
+
+.skills_net {
+  width: 55%;
+}
+/*================ project section============== */
+
+.container .heading{
+  text-align: center;
+  padding-bottom: 15px;
+  color:whitesmoke;
+  text-shadow: 0 5px 10px rgba(236, 144, 6, 0.2);
+}
+
+.container .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap:15px;
+}
+
+.container .box-container .box{
+  box-shadow: 0 5px 10px rgba(235, 117, 7, 0.2);
+  border-radius: 5px;
+  background: #ecd176;
+  text-align: center;
+  padding:10px 10px;
+}
+
+.container .box-container .box img{
+  height: auto;
+  width: 100%;
+}
+
+.container .box-container .box h3{
+  color:black;
+  font-size: 22px;
+  padding:10px 0;
+}
+
+.container .box-container .box p{
+  color:black;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.container .box-container .box .btnp{
+  margin-top: 10px;
+  display: inline-block;
+  background: linear-gradient(to right, #ff8800, #e2f53b); 
+  color:#fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+  text-decoration: none;
+}
+
+.container .box-container .box .btn:hover{
+  letter-spacing: 1px;
+}
+
+.container .box-container .box:hover{
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+  transform: scale(1.03);
+}
+/* ===== CONTACT =====*/
+#contact {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10%;
+}
+
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  color: #fff;
+  max-width: 500px;
+  line-height: 65px;
+  padding-left: 50px;
+  font-size: 18px;
+}
+
+.contact-info i {
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin-right: 50px;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+}
+
+.contact-form h2 {
+  color:#fff;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact-form .text-box,
+.contact-form textarea {
+  background: linear-gradient(to right, gold, #ff2600);
+  color:white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  opacity: 50%;
+}
+
+.contact-form .send-btn {
+  float: right;
+ background: linear-gradient(to right, gold, #ff2600);
+  color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: background;
+}
+.footer{
+  margin-top: 20px;
+  border-top: 1px solid yellow;
+  min-height: 100px;
+  width: 100%;
+  background: #000000;
+  border-top: 2px solid  #ff2600; 
 }
 
