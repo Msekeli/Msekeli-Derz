@@ -437,108 +437,46 @@ nav {
   transform: scale(1.4); /* Increase the image size by 30% on hover */
 }
 /* =============================== SKILLS =====*/
-#skills{
-  height: 100vh;
-}
-.skills__container {
+
+/* Skills section using flexbox */
+#skills {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+ 
 }
 
-.skills_content {
-  margin: 0 10px;
-}
-.skills_number{
+.top_div {
+  grid-column: 1/-1; /* Span the entire row */
+  text-align: center;
   color: #fff;
-}
-.skills_content-left {
-  text-align: left;
+  margin-bottom: 2rem;
 }
 
-.skills_content-right {
-  text-align: right;
+.skill-box {
+  padding: 1rem;
+  border: 1px solid yellow;
+  border-radius: 5%;
 }
 
-.skills__subtitle {
-  font-size: large;
-  text-align: left;
-  color: rgb(250, 247, 232);
-  margin: 10px;
-  text-transform: uppercase;
-}
-
-.skills_data {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.skills__name {
-  text-transform: uppercase;
+.skill-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: #fff;
 }
 
-.skills_bar {
-  position: absolute;
-  bottom: -0.75rem;
-  height: 0.25rem;
-  background-color: yellow;
+.skill-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Adjust the widths for front-end and back-end skills */
-.skills_html {
-  width: 90%;
+.skill-box li {
+  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
-.skills_xaml {
-  width: 70%;
-}
 
-.skills_css {
-  width: 85%;
-}
-
-.skills_bootstrap {
-  width: 55%;
-}
-
-.skills_js {
-  width: 50%;
-}
-
-.skills_flutter {
-  width: 45%;
-}
-
-.skills_photoshop {
-  width: 60%;
-}
-
-.skills_cs {
-  width: 65%;
-}
-
-.skills_java {
-  width: 50%;
-}
-
-.skills_ps {
-  width: 60%;
-}
-
-.skills_ss {
-  width: 60%;
-}
-
-.skills_dart {
-  width: 45%;
-}
-
-.skills_net {
-  width: 55%;
-}
 /*================ project section============== */
 
 .container .heading{
